@@ -203,6 +203,9 @@
                   disabled="disabled">Download html file with password prompt</a></p>
             <pre id="encrypted_html_display">
 Your encrypted string</pre>
+<pre id="salt_for_encryption">
+    The Salt used
+</pre>
         </div>
     </div>
 </div>
@@ -348,6 +351,7 @@ Filename changed to circumvent adblockers that mistake it for a crypto miner (se
         };
 
         document.getElementById('encrypted_html_display').textContent = encrypted;
+        document.getElementById('salt_for_encryption').textContent = salt;
 
         if (document.getElementById("embed-crypto").checked) {
             setFileToDownloadWithEmbeddedCrypto(data);

@@ -290,7 +290,7 @@ Filename changed to circumvent adblockers that mistake it for a crypto miner (se
      * @returns {{salt: string, hashedPassphrase: string}}
      */
     function hashPassphrase(passphrase) {
-        var salt = CryptoJS.lib.WordArray.random(128 / 8).toString();
+        var salt =  "98f817c5951187cfaf27d6aecc51991c";//CryptoJS.lib.WordArray.random(128 / 8).toString();
 
         var hashedPassphrase = CryptoJS.PBKDF2(passphrase, salt, {
             keySize: 256 / 32,
